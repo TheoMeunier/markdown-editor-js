@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <div id="markdown-editor">
+      <div class="toolbar">
+        <div class="group">
+          <button id="heading1"><i class="fa fa-h1" aria-hidden="true"></i>1</button>
+          <button id="heading2"><i class="fa fa-h2" aria-hidden="true"></i>2</button>
+          <button id="heading3"><i class="fa fa-h3" aria-hidden="true"></i>3</button>
+        </div>
+        <div class="group">
+          <button id="bold"><i class="fa fa-bold" aria-hidden="true"></i></button>
+          <button id="italic"><i class="fa fa-italic" aria-hidden="true"></i></button>
+        </div>
+        <div class="group">
+          <button id="link"><i class="fa fa-link" aria-hidden="true"></i></button>
+          <button id="list-ul"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+          <button id="list-ol"><i class="fa fa-list-ol" aria-hidden="true"></i></button>
+          <button id="image"><i class="fa fa-image" ></i></button>
+        </div>
+        <button id="preview">Preview</button>
+      </div>
+      <div id="input-output">
+        <textarea id="input-area" rows="30" cols="50"></textarea>
+        <div id="output-area"></div>
+        <p class="preview-message">Preview Mode</p>
+      </div>
+    </div>
+
+    <file-manager endpoint="http://localhost:8888/api" hidden></file-manager>
+
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
+</html>
