@@ -1,6 +1,8 @@
 import '../css/style.scss';
 import {FileManager} from 'filemanager-element';
 import 'filemanager-element/FileManager.css'
+import "@fortawesome/fontawesome-free/css/all.css";
+import "@fortawesome/fontawesome-free/js/all.js";
 
 // -------------------------------------------
 // DEFAULT INPUT AND OUTPUT AREA
@@ -14,12 +16,9 @@ let previewMessage = document.querySelector('.preview-message');
 const preview = document.querySelector('#preview');
 const boldButton = document.querySelector('#bold');
 const italicButton = document.querySelector('#italic');
-const heading1Button = document.querySelector('#heading1');
-const heading2Button = document.querySelector('#heading2');
-const heading3Button = document.querySelector('#heading3');
+const codeButton = document.querySelector('#code');
+const strikethroughButton = document.querySelector(' #strikethrough')
 const linkButton = document.querySelector('#link');
-const ulButton = document.querySelector('#list-ul');
-const olButton = document.querySelector('#list-ol');
 
 
 preview.addEventListener('click', () => {
@@ -38,28 +37,16 @@ italicButton.addEventListener('click', () =>
     insertText(textarea, '**', 'demo', 1, 5)
 );
 
-heading1Button.addEventListener('click', () =>
-    insertText(textarea, '#', 'heading1', 1, 9)
+codeButton.addEventListener('click', () =>
+    insertText(textarea, '``````', 'demo', 3, 7)
 );
 
-heading2Button.addEventListener('click', () =>
-    insertText(textarea, '##', 'heading2', 2, 10)
-);
-
-heading3Button.addEventListener('click', () =>
-    insertText(textarea, '###', 'heading3', 3, 11)
-);
+strikethroughButton.addEventListener('click', () => {
+   insertText(textarea, '~~', 'demo', 2, 6)
+});
 
 linkButton.addEventListener('click', () =>
     insertText(textarea, '[](http://...)', 'url text', 1, 9)
-);
-
-ulButton.addEventListener('click', function () {
-    insertText(textarea, '* ', 'item', 2, 6);
-});
-
-olButton.addEventListener('click', () =>
-    insertText(textarea, '1. ', 'item', 3, 7)
 );
 
 // -------------------------------------------
@@ -289,7 +276,7 @@ fileManager.addEventListener('selectfile', e => {
     fileManager.setAttribute('hidden', '')
 })
 
-// On ferme le file manager
+// Close filemanager
 fileManager.addEventListener('close', () => {
     fileManager.setAttribute('hidden', '')
 })
