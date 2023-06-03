@@ -7,26 +7,19 @@
     <title>Markdown Editor</title>
   </head>
   <body>
-    <div id="markdown-editor">
-      <div class="toolbar">
-        <div class="group">
+    <div class="markdown-editor">
+      <div class="editor__toolbar">
+        <div class="editor__toolbar__group">
           <div class="icon" id="bold"><i class="fa fa-bold" aria-hidden="true"></i></div>
           <div class="icon" id="italic"><i class="fa fa-italic" aria-hidden="true"></i></div>
-          <div class="icon" id="strikethrough"><i class="fa-solid fa-strikethrough" aria-hidden="true"></i></div>
           <div class="icon" id="code"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
           <div class="icon" id="link"><i class="fa fa-link" aria-hidden="true"></i></div>
-          <div class="icon" id="image"><i class="fa fa-image" ></i></div>
         </div>
-        <div id="preview"><i class="fa-solid fa-eye"></i></div>
       </div>
       <div id="input-output">
         <textarea id="input-area" rows="30" cols="50"></textarea>
-        <div id="output-area"></div>
-        <p class="preview-message">Preview Mode</p>
       </div>
     </div>
-
-    <file-manager endpoint="http://localhost:8888/api" hidden></file-manager>
 
     <script type="module" src="/assets/js/main.js"></script>
   </body>
