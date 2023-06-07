@@ -33,40 +33,41 @@ const editor = CodeMirror.fromTextArea(textarea, {
     cursorBlinkRate: 500,
 })
 
-const select = editor.getSelections();
-const cursorStart = editor.getCursor("start");
-const cursorEnd = editor.getCursor("end");
-
 if (boldButton) {
     boldButton.addEventListener('click', () => {
-        if (select.length > 0 && select[0] !== "") {
-            editor.replaceRange('**' + select[0] + '**', cursorStart, cursorEnd);
+        if (editor.getSelection() !== "") {
+            editor.replaceSelection('**' + editor.getSelection() + '**');
+            editor.focus()
         } else {
             editor.replaceSelection('**demo**');
+            editor.focus()
         }
     });
 }
 
 if (italicButton) {
     italicButton.addEventListener('click', () => {
-
-        if (select.length > 0 && select[0] !== "") {
-            editor.replaceRange("*" + select[0] + "*", editor.getCursor("start"), editor.getCursor("end"))
+        if (editor.getSelection() !== "") {
+            editor.replaceSelection("*" + editor.getSelection() + "*")
+            editor.focus()
         } else {
             editor.replaceSelection("*demo*")
+            editor.focus()
         }
     });
 }
 
 if (codeButton) {
-    codeButton.addEventListener('click', () =>
+    codeButton.addEventListener('click', () => {
         editor.replaceSelection("```\nYour code\n```")
-    );
+        editor.focus()
+    });
 }
 
 if (linkButton) {
     linkButton.addEventListener('click', () => {
         editor.replaceRange('[](http://...)', editor.getCursor())
+        editor.focus()
     });
 }
 
