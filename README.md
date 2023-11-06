@@ -1,6 +1,6 @@
 # Editor Markdown Js + Scss
-Markdown editor, très simple à ajouter dans un projet comment laravel ou symfony ou autre. Avec une partie de preview,
-pour le confort de la partie utilisateur.
+Markdown editor, very easy to add in a project like laravel or symfony or other. With a preview section,
+for the comfort of the user.
 
 ## Dependencies:
 
