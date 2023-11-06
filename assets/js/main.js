@@ -1,6 +1,4 @@
 import '../css/style.scss';
-import "@fortawesome/fontawesome-free/css/all.css";
-import "@fortawesome/fontawesome-free/js/all.js";
 import CodeMirror from "codemirror";
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/mode/markdown/markdown.js'
