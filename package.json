@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "sass": "^1.69.6",
-    "vite": "^5.0.10"
+    "vite": "^5.0.13"
   },
   "dependencies": {
     "codemirror": "^5.59.0",
